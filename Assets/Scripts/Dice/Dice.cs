@@ -53,9 +53,9 @@ public class Dice : MonoBehaviour
      */
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Ground" && GameManager.instance.isSoundOn)
+        if (col.tag == "Ground"/* && GameManager.instance.isSoundOn*/)
         {
-            GameManager.instance.source.Play();
+            //GameManager.instance.source.Play();
         }
     }
 }
