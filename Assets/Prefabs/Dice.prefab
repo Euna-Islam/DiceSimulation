@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 3
-  dice: {fileID: 4290355195594527465}
+  SideValue: 3
+  Dice: {fileID: 4290355195594527465}
 --- !u!65 &8177664663182075376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -217,8 +217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 2
-  dice: {fileID: 4290355195594527465}
+  SideValue: 2
+  Dice: {fileID: 4290355195594527465}
 --- !u!65 &8996695403638795449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -337,8 +337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 4
-  dice: {fileID: 4290355195594527465}
+  SideValue: 4
+  Dice: {fileID: 4290355195594527465}
 --- !u!65 &8299297079890173906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -457,8 +457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 1
-  dice: {fileID: 4290355195594527465}
+  SideValue: 1
+  Dice: {fileID: 4290355195594527465}
 --- !u!65 &3392430880757454550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -577,8 +577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 5
-  dice: {fileID: 4290355195594527465}
+  SideValue: 5
+  Dice: {fileID: 4290355195594527465}
 --- !u!65 &6174429660009457872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -697,8 +697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 6
-  dice: {fileID: 4290355195594527465}
+  SideValue: 6
+  Dice: {fileID: 4290355195594527465}
 --- !u!65 &539894545455853344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -875,8 +875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397345a3e0ee0384698ef0979c439c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diceScore: 0
-  diceSides:
+  DiceScore: 0
+  DiceSides:
   - {fileID: 2053894309}
   - {fileID: 1409857035}
   - {fileID: 942178260}
@@ -886,6 +886,9 @@ MonoBehaviour:
   SoundEvent: {fileID: 11400000, guid: 0588ac2b773bc7a4eb723758c02a52a8, type: 2}
   ScoreEvent: {fileID: 11400000, guid: eee37c57c83a07e42853d1baaf0d558e, type: 2}
   DiceSet: {fileID: 11400000, guid: 0de3ad29db8bcb2489a9c1e0ce2d5156, type: 2}
+  MinTorque: {fileID: 11400000, guid: f6f1b6f3f6fe6344c89a30bfec30ea70, type: 2}
+  MaxTorque: {fileID: 11400000, guid: 161f27a50832167468402400765537d1, type: 2}
+  Force: {fileID: 11400000, guid: e1d2695e23f9c604a960cb23c3cedd86, type: 2}
 --- !u!65 &6293096639237416463
 BoxCollider:
   m_ObjectHideFlags: 0

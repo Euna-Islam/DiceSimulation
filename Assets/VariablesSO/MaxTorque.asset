@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1290a605e834fe74e9fafaafcd09b432, type: 3}
-  m_Name: SoundSettingsEvent
+  m_Script: {fileID: 11500000, guid: f273fccab1cdc974f9e2cbda3470ffed, type: 3}
+  m_Name: MaxTorque
   m_EditorClassIdentifier: 
+  value: 500

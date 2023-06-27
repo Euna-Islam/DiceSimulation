@@ -57,7 +57,7 @@ public class UIManager : MonoBehaviour
  
         foreach (Dice dice in DiceSet.Items)
         {
-            Score.value += dice.diceScore;
+            Score.value += dice.DiceScore;
         }
         scoreText.text = "Score: " + Score.value.ToString();
     }

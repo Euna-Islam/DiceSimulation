@@ -11,6 +11,9 @@ public class DiceController : MonoBehaviour
     [SerializeField]
     private IntVariable MaxNoOfDice;
 
+    [SerializeField]
+    private FloatVariable BoardWidth, BoardLength, DiceInitialHeight;
+
     private ObjectPool<GameObject> DicePool;
 
     private void Start()
@@ -36,9 +39,8 @@ public class DiceController : MonoBehaviour
     {
         if (DicesOnBoard.Count < MaxNoOfDice.value)
         {
-            GameObject newDice = DicePool.Get();// Instantiate(DicePrefab, new Vector3(Random.Range(-2.5f, 2.5f), 6, Random.Range(-1.5f, 1.5f)), DicePrefab.transform.rotation);
-
-            newDice.transform.position = new Vector3(Random.Range(-2.5f, 2.5f), 6, Random.Range(-1.5f, 1.5f));
+            GameObject newDice = DicePool.Get();
+            newDice.transform.position = new Vector3(Random.Range(-BoardLength.Value, BoardLength.Value), DiceInitialHeight.Value, Random.Range(-BoardWidth.Value, BoardWidth.Value));
             newDice.transform.rotation = DicePrefab.transform.rotation;
 
             DicesOnBoard.Push(newDice);
@@ -56,17 +58,4 @@ public class DiceController : MonoBehaviour
             DicePool.Release(lastDice);
         }
     }
-
-    ///*
-    // * Roll all dices when tap is detected
-    // */
-    //public void RollAllDice()
-    //{
-    //    foreach (GameObject dice in DicesOnBoard)
-    //    {
-    //        dice.GetComponent<Dice>().RollDice();
-    //    }
-    //}
-
-
 }

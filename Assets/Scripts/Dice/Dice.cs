@@ -2,21 +2,32 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
-    Rigidbody rb;
+    Rigidbody Rb;
+    [Tooltip("Dice score side value")]
+    public int DiceScore;
+    [Tooltip("List of all sides of a dice")]
+    public DiceSide[] DiceSides;
 
-    public int diceScore;
+    #region Configuration
+    [SerializeField]
+    private GameEvent SoundEvent, ScoreEvent;
+    [SerializeField]
+    private DiceRuntimeSet DiceSet;
+    [SerializeField]
+    private IntVariable MinTorque, MaxTorque, Force;
+    #endregion
 
-    public DiceSide[] diceSides;
-
-    public GameEvent SoundEvent, ScoreEvent;
-
-    public DiceRuntimeSet DiceSet;
-
+    /// <summary>
+    /// on enable add this object to runtime dice set
+    /// </summary>
     private void OnEnable()
     {
         DiceSet.Add(this);
     }
 
+    /// <summary>
+    /// on disable remove from runtime dice set
+    /// </summary>
     private void OnDisable()
     {
         DiceSet.Remove(this);
@@ -24,53 +35,53 @@ public class Dice : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.AddTorque(Random.Range(0, 500), Random.Range(0, 500), Random.Range(0, 500));
+        Rb = GetComponent<Rigidbody>();
         ThrowDice();
     }
 
-    /*
-     * throw the dice on board
-     */
+    /// <summary>
+    /// throw dice on board
+    /// </summary>
     public void ThrowDice()
     {
-        rb.AddTorque(Random.Range(0, 500), Random.Range(0, 500), Random.Range(0, 500));
+        Rb.AddTorque(Random.Range(MinTorque.value, MaxTorque.value), Random.Range(MinTorque.value, MaxTorque.value), Random.Range(MinTorque.value, MaxTorque.value));
     }
 
-    /*
-     * roll the dice on tap
-     */
+    /// <summary>
+    /// roll the dice after landing on board
+    /// </summary>
     public void RollDice()
     {
-        if (rb.velocity.magnitude == 0)
+        if (Rb.velocity.magnitude == 0)
         {
-            rb.AddForce(0, 1000f, 0, ForceMode.Force);
-            rb.AddTorque(Random.Range(0, 500), Random.Range(0, 500), Random.Range(0, 500));
+            Rb.AddForce(0, Force.value, 0, ForceMode.Force);
+            ThrowDice();
         }
     }
 
-    /*
-     * update the dice score by value of upper side
-     */
+    /// <summary>
+    /// update dice score after landing
+    /// </summary>
+    /// <param name="sideValue">dice score side</param>
     public void UpdateDiceScore(int sideValue)
     {
-        diceScore = sideValue;
+        DiceScore = sideValue;
 
-        if (rb.IsSleeping())
+        if (Rb.IsSleeping())
         {
             ScoreEvent.Raise();
         }
     }
 
-    /*
-     * play roll sound when dice collides with ground
-     */
+    /// <summary>
+    /// on touching the ground, raise sound event
+    /// </summary>
+    /// <param name="col"></param>
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Ground"/* && GameManager.instance.isSoundOn*/)
+        if (col.tag == "Ground")
         {
             SoundEvent.Raise();
-            //GameManager.instance.source.Play();
         }
     }
 }

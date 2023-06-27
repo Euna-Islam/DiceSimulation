@@ -1747,6 +1747,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DicePrefab: {fileID: 4290355195594527465, guid: 350f72f8093bfdb49bc1b1755507d23a, type: 3}
   MaxNoOfDice: {fileID: 11400000, guid: 931c44eac6cead64182817e931d6fb10, type: 2}
+  BoardWidth: {fileID: 11400000, guid: b5b9638f2027ddb459c46d7d6c51d555, type: 2}
+  BoardLength: {fileID: 11400000, guid: 0eb75469e24fe1742a79039d9073ff53, type: 2}
+  DiceInitialHeight: {fileID: 11400000, guid: a994ef7af12c687418f51c4422aad7c4, type: 2}
 --- !u!114 &1781442788
 MonoBehaviour:
   m_ObjectHideFlags: 0
