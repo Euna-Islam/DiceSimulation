@@ -7,9 +7,6 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timeNow;
     public TextMeshProUGUI scoreText;
 
-    public GameObject speakerBtn;
-    public GameObject muteBtn;
-
     public IntVariable Score;
 
     public DiceRuntimeSet DiceSet;
