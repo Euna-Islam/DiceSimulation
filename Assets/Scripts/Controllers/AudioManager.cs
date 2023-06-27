@@ -9,27 +9,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //CheckPlayerPref();
-
         source = GetComponent<AudioSource>();
     }
-
-    void CheckPlayerPref() {
-        /*
-         * check if player preference is saved for sound mute/unmute
-         */
-        if (PlayerPrefs.HasKey(IS_MUTED))
-        {
-            IsMuted.value = PlayerPrefs.GetInt(IS_MUTED) == 0 ? true : false;
-        }
-        else
-        {
-            IsMuted.value = false;
-            PlayerPrefs.SetInt(IS_MUTED, 0);
-        }
-    }
-
-
     public void Play()
     {
         source.Play();
