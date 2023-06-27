@@ -1,15 +1,32 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class DiceController : MonoBehaviour
 {
-    public GameObject dicePrefab;
-    public Stack diceList;
+    [SerializeField]
+    private GameObject DicePrefab;
+    private Stack DicesOnBoard;
 
-    public IntVariable MAX_DICE;
+    [SerializeField]
+    private IntVariable MaxNoOfDice;
 
-    public IntVariable Score;
+    private ObjectPool<GameObject> DicePool;
+
+    private void Start()
+    {
+        DicesOnBoard = new Stack();
+
+        DicePool = new ObjectPool<GameObject>(() =>
+        { return Instantiate(DicePrefab); },
+        dice => { dice.SetActive(true); },
+        dice => { dice.SetActive(false); },
+        dice => { Destroy(dice); },
+        false,
+        MaxNoOfDice.value,
+        MaxNoOfDice.value
+        );
+    }
 
     /*
      * Add new dice when plus button is clicked
@@ -17,10 +34,14 @@ public class DiceController : MonoBehaviour
      */
     public void AddNewPrefab()
     {
-        if (diceList.Count < MAX_DICE.value)
+        if (DicesOnBoard.Count < MaxNoOfDice.value)
         {
-            GameObject newDice = Instantiate(dicePrefab, new Vector3(UnityEngine.Random.Range(-2.5f, 2.5f), 6, UnityEngine.Random.Range(-1.5f, 1.5f)), dicePrefab.transform.rotation);
-            diceList.Push(newDice);
+            GameObject newDice = DicePool.Get();// Instantiate(DicePrefab, new Vector3(Random.Range(-2.5f, 2.5f), 6, Random.Range(-1.5f, 1.5f)), DicePrefab.transform.rotation);
+
+            newDice.transform.position = new Vector3(Random.Range(-2.5f, 2.5f), 6, Random.Range(-1.5f, 1.5f));
+            newDice.transform.rotation = DicePrefab.transform.rotation;
+
+            DicesOnBoard.Push(newDice);
         }
     }
 
@@ -29,34 +50,23 @@ public class DiceController : MonoBehaviour
      */
     public void RemovePrefab()
     {
-        if (diceList.Count > 0)
+        if (DicesOnBoard.Count > 0)
         {
-            GameObject lastDice = (GameObject)diceList.Pop();
-            Destroy(lastDice);
+            GameObject lastDice = (GameObject)DicesOnBoard.Pop();
+            DicePool.Release(lastDice);
         }
     }
 
-    //public void CalculateScore() {
-    //    Score.value = 0;
-    //    foreach (GameObject dice in diceList)
+    ///*
+    // * Roll all dices when tap is detected
+    // */
+    //public void RollAllDice()
+    //{
+    //    foreach (GameObject dice in DicesOnBoard)
     //    {
-    //        Score.value += dice.GetComponent<Dice>().diceScore;
+    //        dice.GetComponent<Dice>().RollDice();
     //    }
     //}
 
-    /*
-     * Roll all dices when tap is detected
-     */
-    public void RollAllDice()
-    {
-        foreach (GameObject dice in diceList)
-        {
-            dice.GetComponent<Dice>().RollDice();
-        }
-    }
 
-    private void Start()
-    {
-        diceList = new Stack();
-    }
 }

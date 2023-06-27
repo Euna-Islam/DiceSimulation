@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public TextMeshProUGUI timeNow;
-    public TextMeshProUGUI scoreText;
+    [SerializeField]
+    private TextMeshProUGUI timeNow;
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
 
-    public IntVariable Score;
-
-    public DiceRuntimeSet DiceSet;
+    [SerializeField]
+    private IntVariable Score;
+    [SerializeField]
+    private DiceRuntimeSet DiceSet;
 
     private void Start()
     {

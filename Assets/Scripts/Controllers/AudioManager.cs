@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public const string IS_MUTED = "IS_MUTED";
-
-    public AudioSource source;
-    public BoolVariable IsMuted;
+    [SerializeField]
+    private AudioSource source;
+    [SerializeField]
+    private BoolVariable IsMuted;
 
     private void Start()
     {

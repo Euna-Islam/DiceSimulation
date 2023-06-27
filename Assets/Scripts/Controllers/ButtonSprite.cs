@@ -3,20 +3,26 @@ using UnityEngine.UI;
 
 public class ButtonSprite : MonoBehaviour
 {
-    public const string IS_MUTED = "IS_MUTED";
-
-    public SpriteVariable Mute, Unmute;
-
-    public BoolVariable IsMuted;
-
-    public GameEvent SoundEvent;
+    private const string IS_MUTED = "IS_MUTED";
+    [SerializeField]
+    private SpriteVariable Mute, Unmute;
+    [SerializeField]
+    private BoolVariable IsMuted;
+    [SerializeField]
+    private GameEvent SoundEvent;
 
     private void Start()
     {
         CheckPlayerPref();
         UpdateSprite();
     }
-
+    /*
+    <summary>
+        Description
+        Input
+        Return
+    </summary>
+    */
     void CheckPlayerPref()
     {
         /*
