@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 4
+  sideValue: 3
   dice: {fileID: 4290355195594527465}
 --- !u!65 &8177664663182075376
 BoxCollider:
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 5
+  sideValue: 2
   dice: {fileID: 4290355195594527465}
 --- !u!65 &8996695403638795449
 BoxCollider:
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 3
+  sideValue: 4
   dice: {fileID: 4290355195594527465}
 --- !u!65 &8299297079890173906
 BoxCollider:
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 6
+  sideValue: 1
   dice: {fileID: 4290355195594527465}
 --- !u!65 &3392430880757454550
 BoxCollider:
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 2
+  sideValue: 5
   dice: {fileID: 4290355195594527465}
 --- !u!65 &6174429660009457872
 BoxCollider:
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideValue: 1
+  sideValue: 6
   dice: {fileID: 4290355195594527465}
 --- !u!65 &539894545455853344
 BoxCollider:
@@ -884,6 +884,8 @@ MonoBehaviour:
   - {fileID: 790983215}
   - {fileID: 1510595441}
   SoundEvent: {fileID: 11400000, guid: 0588ac2b773bc7a4eb723758c02a52a8, type: 2}
+  ScoreEvent: {fileID: 11400000, guid: eee37c57c83a07e42853d1baaf0d558e, type: 2}
+  DiceSet: {fileID: 11400000, guid: 0de3ad29db8bcb2489a9c1e0ce2d5156, type: 2}
 --- !u!65 &6293096639237416463
 BoxCollider:
   m_ObjectHideFlags: 0

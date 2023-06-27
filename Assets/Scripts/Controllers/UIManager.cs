@@ -5,9 +5,14 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI timeNow;
+    public TextMeshProUGUI scoreText;
 
     public GameObject speakerBtn;
     public GameObject muteBtn;
+
+    public IntVariable Score;
+
+    public DiceRuntimeSet DiceSet;
 
     private void Start()
     {
@@ -47,8 +52,13 @@ public class UIManager : MonoBehaviour
 
     }
 
-    //public void FlipSoundSprite() {
-    //    speakerBtn.SetActive(false);
-    //    muteBtn.SetActive(true);
-    //}
+    public void UpdateScore() {
+        Score.value = 0;
+ 
+        foreach (Dice dice in DiceSet.Items)
+        {
+            Score.value += dice.diceScore;
+        }
+        scoreText.text = "Score: " + Score.value.ToString();
+    }
 }

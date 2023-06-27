@@ -9,6 +9,8 @@ public class DiceController : MonoBehaviour
 
     public IntVariable MAX_DICE;
 
+    public IntVariable Score;
+
     /*
      * Add new dice when plus button is clicked
      * to keep track of the dice, add it to list
@@ -33,6 +35,14 @@ public class DiceController : MonoBehaviour
             Destroy(lastDice);
         }
     }
+
+    //public void CalculateScore() {
+    //    Score.value = 0;
+    //    foreach (GameObject dice in diceList)
+    //    {
+    //        Score.value += dice.GetComponent<Dice>().diceScore;
+    //    }
+    //}
 
     /*
      * Roll all dices when tap is detected

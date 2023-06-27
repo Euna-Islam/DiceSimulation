@@ -8,7 +8,19 @@ public class Dice : MonoBehaviour
 
     public DiceSide[] diceSides;
 
-    public GameEvent SoundEvent;
+    public GameEvent SoundEvent, ScoreEvent;
+
+    public DiceRuntimeSet DiceSet;
+
+    private void OnEnable()
+    {
+        DiceSet.Add(this);
+    }
+
+    private void OnDisable()
+    {
+        DiceSet.Remove(this);
+    }
 
     void Start()
     {
@@ -46,7 +58,7 @@ public class Dice : MonoBehaviour
 
         if (rb.IsSleeping())
         {
-            GameManager.instance.CalculateScoreandDisplay();
+            ScoreEvent.Raise();
         }
     }
 

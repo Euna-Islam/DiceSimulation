@@ -784,8 +784,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeNow: {fileID: 1243713685}
+  scoreText: {fileID: 1843640923}
   speakerBtn: {fileID: 2049538073}
   muteBtn: {fileID: 1943632373}
+  Score: {fileID: 11400000, guid: 7aeca15f42b13344193324d5f2933d8c, type: 2}
+  DiceSet: {fileID: 11400000, guid: 0de3ad29db8bcb2489a9c1e0ce2d5156, type: 2}
 --- !u!4 &901268433
 Transform:
   m_ObjectHideFlags: 0
@@ -813,13 +816,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f36473d1a1acf642ad96e555a83d3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 5086a0c680bcb924696a8bd7853f2547, type: 2}
+  Event: {fileID: 11400000, guid: eee37c57c83a07e42853d1baaf0d558e, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 901268432}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: FlipSoundSprite
+        m_MethodName: UpdateScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1761,6 +1764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dicePrefab: {fileID: 4290355195594527465, guid: 350f72f8093bfdb49bc1b1755507d23a, type: 3}
   MAX_DICE: {fileID: 11400000, guid: 931c44eac6cead64182817e931d6fb10, type: 2}
+  Score: {fileID: 0}
 --- !u!114 &1781442788
 MonoBehaviour:
   m_ObjectHideFlags: 0
