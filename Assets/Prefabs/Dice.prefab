@@ -94,11 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3984294238639235897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58e44103aa1eb42428b938585c525fa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onGround: 0
-  sideValue: 3
+  sideValue: 4
   dice: {fileID: 4290355195594527465}
 --- !u!65 &8177664663182075376
 BoxCollider:
@@ -108,9 +107,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3984294238639235897}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Center: {x: 0, y: 9.313226e-10, z: 0}
 --- !u!1 &3984294238810988370
@@ -207,11 +214,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3984294238810988370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58e44103aa1eb42428b938585c525fa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onGround: 0
-  sideValue: 2
+  sideValue: 5
   dice: {fileID: 4290355195594527465}
 --- !u!65 &8996695403638795449
 BoxCollider:
@@ -221,9 +227,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3984294238810988370}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Center: {x: 0, y: -0.00000011920929, z: 0.00000047683716}
 --- !u!1 &3984294239197188791
@@ -320,11 +334,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3984294239197188791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58e44103aa1eb42428b938585c525fa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onGround: 0
-  sideValue: 4
+  sideValue: 3
   dice: {fileID: 4290355195594527465}
 --- !u!65 &8299297079890173906
 BoxCollider:
@@ -334,9 +347,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3984294239197188791}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Center: {x: 0, y: 9.313226e-10, z: 0}
 --- !u!1 &3984294239698318868
@@ -433,11 +454,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3984294239698318868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58e44103aa1eb42428b938585c525fa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onGround: 0
-  sideValue: 1
+  sideValue: 6
   dice: {fileID: 4290355195594527465}
 --- !u!65 &3392430880757454550
 BoxCollider:
@@ -447,9 +467,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3984294239698318868}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Center: {x: 0, y: 9.313226e-10, z: 0}
 --- !u!1 &3984294239799024510
@@ -546,11 +574,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3984294239799024510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58e44103aa1eb42428b938585c525fa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onGround: 0
-  sideValue: 5
+  sideValue: 2
   dice: {fileID: 4290355195594527465}
 --- !u!65 &6174429660009457872
 BoxCollider:
@@ -560,9 +587,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3984294239799024510}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Center: {x: 0, y: 0.00000023841858, z: 0}
 --- !u!1 &3984294240232955352
@@ -659,11 +694,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3984294240232955352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58e44103aa1eb42428b938585c525fa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e10b6f082654c640b19abe0f47f0e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onGround: 0
-  sideValue: 6
+  sideValue: 1
   dice: {fileID: 4290355195594527465}
 --- !u!65 &539894545455853344
 BoxCollider:
@@ -673,9 +707,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3984294240232955352}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Center: {x: 0, y: 9.313226e-10, z: 0}
 --- !u!1 &4290355195594527465
@@ -728,7 +770,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4290355195594527465}
-  m_Mesh: {fileID: -5495902117074765545, guid: f66b11fe3ddabfc44a1737a1815f7d89, type: 3}
+  m_Mesh: {fileID: -5495902117074765545, guid: 457b3408b70c57f4eb80046f7d961b51, type: 3}
 --- !u!23 &2344857124301337404
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -749,7 +791,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5019b146278664e4a836d6bd8ff98fa6, type: 2}
+  - {fileID: 2100000, guid: 59dd50587e7ef4c448f142ce509478e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -778,10 +820,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4290355195594527465}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 3
   m_Drag: 1
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -795,9 +848,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4290355195594527465}
   m_Material: {fileID: 13400000, guid: 37ccb22411739784bba9509d3de17a0e, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 0
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: f66b11fe3ddabfc44a1737a1815f7d89, type: 3}
@@ -810,17 +871,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4290355195594527465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e1b29b53bcb60b408c4586d6814b12f, type: 3}
+  m_Script: {fileID: 11500000, guid: 397345a3e0ee0384698ef0979c439c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diceValue: 0
-  diceSides:
-  - {fileID: 1409857035}
-  - {fileID: 790983215}
-  - {fileID: 2053894309}
-  - {fileID: 1510595441}
-  - {fileID: 942178260}
-  - {fileID: 426348102}
+  diceScore: 0
+  diceSides: []
 --- !u!65 &6293096639237416463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -828,9 +883,17 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4290355195594527465}
-  m_Material: {fileID: 13400000, guid: 37ccb22411739784bba9509d3de17a0e, type: 2}
+  m_Material: {fileID: 13400000, guid: fc66d44fec5402841a8e2f96dc488c8c, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.0039999997, y: 0.004, z: 0.004}
   m_Center: {x: 0, y: 0, z: 0}

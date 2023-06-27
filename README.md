@@ -6,3 +6,5 @@ A dice simulation made in Unity
 2. All the dices roll on tap
 3. The overall score is counted and displayed on top
 4. You can add/remove dices from the board
+
+Unity Version: 2022.3.3f1
