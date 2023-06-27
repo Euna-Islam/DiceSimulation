@@ -8,6 +8,8 @@ public class Dice : MonoBehaviour
 
     public DiceSide[] diceSides;
 
+    public GameEvent SoundEvent;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -55,6 +57,7 @@ public class Dice : MonoBehaviour
     {
         if (col.tag == "Ground"/* && GameManager.instance.isSoundOn*/)
         {
+            SoundEvent.Raise();
             //GameManager.instance.source.Play();
         }
     }

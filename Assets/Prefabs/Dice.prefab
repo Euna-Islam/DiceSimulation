@@ -735,6 +735,7 @@ GameObject:
   - component: {fileID: 3984294239694811066}
   - component: {fileID: 3984294239694811071}
   - component: {fileID: 6293096639237416463}
+  - component: {fileID: 6801244453479301927}
   m_Layer: 0
   m_Name: Dice
   m_TagString: Ground
@@ -875,7 +876,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceScore: 0
-  diceSides: []
+  diceSides:
+  - {fileID: 2053894309}
+  - {fileID: 1409857035}
+  - {fileID: 942178260}
+  - {fileID: 426348102}
+  - {fileID: 790983215}
+  - {fileID: 1510595441}
+  SoundEvent: {fileID: 11400000, guid: 0588ac2b773bc7a4eb723758c02a52a8, type: 2}
 --- !u!65 &6293096639237416463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -897,3 +905,31 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0039999997, y: 0.004, z: 0.004}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6801244453479301927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4290355195594527465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f36473d1a1acf642ad96e555a83d3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: fc2ea6cdc53944b47bc65af2adf912f5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3984294239694811071}
+        m_TargetAssemblyTypeName: Dice, Assembly-CSharp
+        m_MethodName: RollDice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
