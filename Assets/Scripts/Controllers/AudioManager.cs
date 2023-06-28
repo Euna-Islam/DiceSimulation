@@ -2,21 +2,25 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    [Tooltip("Audio source")]
     [SerializeField]
-    private AudioSource source;
+    private AudioSource Source;
+    [Tooltip("Is muted")]
     [SerializeField]
     private BoolVariable IsMuted;
 
-    private void Start()
-    {
-        source = GetComponent<AudioSource>();
-    }
+    /// <summary>
+    /// Play dice sound
+    /// </summary>
     public void Play()
     {
-        source.Play();
+        Source.Play();
     }
 
-    public void FlipSoundSettings() {
-        source.mute = IsMuted.value;
+    /// <summary>
+    /// Toggle sound settings
+    /// </summary>
+    public void ToggleSoundSettings() {
+        Source.mute = IsMuted.value;
     }
 }

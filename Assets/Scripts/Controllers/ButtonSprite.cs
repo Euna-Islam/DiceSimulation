@@ -4,10 +4,13 @@ using UnityEngine.UI;
 public class ButtonSprite : MonoBehaviour
 {
     private const string IS_MUTED = "IS_MUTED";
+    [Tooltip("Mute Unmute sprites")]
     [SerializeField]
     private SpriteVariable Mute, Unmute;
+    [Tooltip("Is muted SO")]
     [SerializeField]
     private BoolVariable IsMuted;
+    [Tooltip("Event for change in sound setting")]
     [SerializeField]
     private GameEvent SoundEvent;
 
@@ -16,13 +19,9 @@ public class ButtonSprite : MonoBehaviour
         CheckPlayerPref();
         UpdateSprite();
     }
-    /*
-    <summary>
-        Description
-        Input
-        Return
-    </summary>
-    */
+    /// <summary>
+    /// at the beginning check player prefs for sound settings
+    /// </summary>
     void CheckPlayerPref()
     {
         /*
@@ -38,12 +37,17 @@ public class ButtonSprite : MonoBehaviour
             PlayerPrefs.SetInt(IS_MUTED, 0);
         }
     }
-    public void FlipSoundSettings() {
+    /// <summary>
+    /// Toggle sound settings
+    /// </summary>
+    public void ToggleSoundSettings() {
         IsMuted.FlipBool();
         PlayerPrefs.SetInt(IS_MUTED, IsMuted.value ? 1 : 0);
         UpdateSprite();
     }
-
+    /// <summary>
+    /// Update the button sprite for mute/unmute
+    /// </summary>
     public void UpdateSprite() {
         GetComponent<Image>().sprite = IsMuted.value ? Mute.Sprite : Unmute.Sprite;
         SoundEvent.Raise();

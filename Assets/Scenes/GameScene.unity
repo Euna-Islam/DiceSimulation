@@ -782,8 +782,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583a986370d88c44fa73ce79a1f3b6cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeNow: {fileID: 1243713685}
-  scoreText: {fileID: 1843640923}
+  TimeNow: {fileID: 1243713685}
+  ScoreText: {fileID: 1843640923}
   Score: {fileID: 11400000, guid: 7aeca15f42b13344193324d5f2933d8c, type: 2}
   DiceSet: {fileID: 11400000, guid: 0de3ad29db8bcb2489a9c1e0ce2d5156, type: 2}
 --- !u!4 &901268433
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0d8f29afc8308428e5c03aba174f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 1196385499}
+  Source: {fileID: 1196385499}
   IsMuted: {fileID: 11400000, guid: 6a8676dbd77f81e42b295c94e2bbcc45, type: 2}
 --- !u!82 &1196385499
 AudioSource:
@@ -1190,8 +1190,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1196385498}
-        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
-        m_MethodName: FlipSoundSettings
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ToggleSoundSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1768,7 +1768,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1781442787}
         m_TargetAssemblyTypeName: DiceController, Assembly-CSharp
-        m_MethodName: AddNewPrefab
+        m_MethodName: AddDice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1796,7 +1796,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1781442787}
         m_TargetAssemblyTypeName: DiceController, Assembly-CSharp
-        m_MethodName: RemovePrefab
+        m_MethodName: RemoveDice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2405,7 +2405,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1943632379}
         m_TargetAssemblyTypeName: ButtonSprite, Assembly-CSharp
-        m_MethodName: FlipSoundSettings
+        m_MethodName: ToggleSoundSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

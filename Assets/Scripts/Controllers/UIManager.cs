@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    [Tooltip("Current time text field")]
     [SerializeField]
-    private TextMeshProUGUI timeNow;
+    private TextMeshProUGUI TimeNow;
+    [Tooltip("Score text field")]
     [SerializeField]
-    private TextMeshProUGUI scoreText;
+    private TextMeshProUGUI ScoreText;
 
     [SerializeField]
     private IntVariable Score;
@@ -19,11 +21,11 @@ public class UIManager : MonoBehaviour
         InvokeRepeating("UpdateTime", 0f, 1f);
     }
 
+    /// <summary>
+    /// display current hour and minute
+    /// </summary>
     void UpdateTime()
     {
-        /*
-         * display current hour and minute in the UI
-         */
         DateTime current = DateTime.Now;
         int hour = current.Hour;
         string hourString = "";
@@ -48,10 +50,13 @@ public class UIManager : MonoBehaviour
             minuteString = minute.ToString();
         }
 
-        timeNow.text = hourString + ":" + minuteString;
+        TimeNow.text = hourString + ":" + minuteString;
 
     }
 
+    /// <summary>
+    /// Update the UI score
+    /// </summary>
     public void UpdateScore() {
         Score.value = 0;
  
@@ -59,6 +64,6 @@ public class UIManager : MonoBehaviour
         {
             Score.value += dice.DiceScore;
         }
-        scoreText.text = "Score: " + Score.value.ToString();
+        ScoreText.text = "Score: " + Score.value.ToString();
     }
 }
